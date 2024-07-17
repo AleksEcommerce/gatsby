@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Link } from 'gatsby';
+import { useStaticQuery, graphql } from 'gatsby';
 
 import {
   container,
@@ -8,7 +9,10 @@ import {
   navLinkItem,
   navLinkText,
   siteTitle,
-} from './layout.module.css'
+} from './layout.module.css';
+import Header from './header';
+import useSiteMetadata from '../hooks/useSiteMetaData';
+
 
 const pageStyles = {
   color: "#232129",
@@ -16,8 +20,12 @@ const pageStyles = {
 }
 
 const Layout = ({ pageTitle, children }) => {
+  const data = useSiteMetadata();
   return (
     <main style={pageStyles} className={container}>
+      <Header>
+        <h1 className={siteTitle}>{data.title}</h1>
+      </Header>
       <nav>
         <ul className={navLinks}>
           <li className={navLinkItem}>
@@ -25,6 +33,9 @@ const Layout = ({ pageTitle, children }) => {
           </li>
           <li className={navLinkItem}>
             <Link className={navLinkText} to="/about">About</Link>
+          </li>
+          <li className={navLinkItem}>
+            <Link className={navLinkText} to="/blog">Blog</Link>
           </li>
         </ul>
       </nav>
