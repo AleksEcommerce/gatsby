@@ -1,0 +1,51 @@
+.b-clients {
+    margin-bottom: 60px;
+
+    &.m-learning {
+        .b-clients__list-item {
+            &::before {
+                background: none;
+                content: "*";
+                color: $color-primary;
+                font-size: 72px;
+                top: 14px;
+            }
+        }
+    }
+
+    &__title {
+        @include main-title;
+
+        & {
+            margin-left: 40px;
+        }
+    }
+
+    &__list {
+ 
+    }
+
+    &__list-item {
+        position: relative;
+        font-size: 36px;
+        line-height: 1.2em;
+        padding-left: 40px;
+        margin-bottom: 32px;
+ 
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            background: rgb(230,86,42);
+            background: radial-gradient(circle, rgba(230,86,42,0.7) 0%, rgba(230,86,42,0) 70%);
+            width: 34px;
+            height: 34px;
+            top: 6px;
+            left: 0;
+        }
+    }
+
+    &__btn {
+        margin: 20px 38px;
+    }
+}

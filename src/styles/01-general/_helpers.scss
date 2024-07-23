@@ -1,0 +1,18 @@
+// Helper Classes
+.hidden {
+    display: none !important;
+}
+
+.visible {
+    display: block !important;
+}
+
+.hidden-sm {
+    @include media("sm") {
+        display: none !important;
+    }
+}
+
+.text-primary {
+    color: $color-primary;
+}

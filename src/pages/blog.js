@@ -1,6 +1,6 @@
 import * as React from 'react'
-import Layout from '../components/layout'
-import Seo from '../components/seo'
+import Layout from '../components/layout/layout'
+import Seo from '../components/seo/seo'
 import useSiteAllPosts from '../hooks/useSiteAllPosts';
 
 const BlogPage = () => {
@@ -9,11 +9,11 @@ const BlogPage = () => {
     <Layout pageTitle="My Blog Posts">
       <ul>
         {
-            data.map(node => (
-                <li key={node.name}>
-                    {node.name}
-                </li>
-            ))
+          data.map(node => (
+            <li key={node.name}>
+                {node.name}
+            </li>
+          ))
         }
       </ul>
     </Layout>

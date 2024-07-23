@@ -1,8 +1,8 @@
 import * as React from 'react'
 import { Link } from 'gatsby';
-import Layout from '../components/layout';
+import Layout from '../components/layout/layout';
 import { StaticImage } from 'gatsby-plugin-image';
-import Seo from "../components/seo";
+import Seo from "../components/seo/seo";
 
 const AboutPage = () => {
   return (

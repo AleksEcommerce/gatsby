@@ -1,0 +1,55 @@
+// Heading styles
+h1 {
+    font-size: 24px;
+    font-family: $font-family-primary;
+}
+
+h2 {
+    font-size: 20px;
+    font-family: $font-family-primary;
+}
+
+h3 {
+    font-size: 18px;
+    font-family: $font-family-primary;
+}
+
+h4 {
+    font-size: 16px;
+    font-family: $font-family-primary;
+}
+
+h5 {
+    font-size: 14px;
+    font-family: $font-family-primary;
+}
+
+h6 {
+    font-size: 12px;
+    font-family: $font-family-primary;
+}
+
+// List styles
+ul {
+    // Add your styles for unordered lists here
+}
+
+ol {
+    // Add your styles for ordered lists here
+}
+
+li {
+    // Add your styles for list items here
+}
+
+@mixin main-title {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1.2em; 
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+    @include media("sm-down") {
+        font-size: 50px;
+    }
+}

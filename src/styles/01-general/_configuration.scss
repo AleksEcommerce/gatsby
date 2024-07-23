@@ -1,0 +1,48 @@
+// Media Query Mixins
+@mixin media($breakpoint) {
+    @if $breakpoint == "sm-down" {
+        @media (max-width: 767px) {
+            @content;
+        }
+    } 
+    @if $breakpoint == "sm-up" {
+        @media (min-width: 768px) {
+            @content;
+        }
+    } 
+    @else if $breakpoint == "md-only" {
+        @media (min-width: 768px) and (max-width: 1200px) {
+            @content;
+        }
+    }
+    @else if $breakpoint == "lg-down" {
+        @media (min-width: 1201px) {
+            @content;
+        }
+    }
+    @else if $breakpoint == "lg-up" {
+        @media (min-width: 1201px) {
+            @content;
+        }
+    }
+}
+
+// Styles for .container
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include media("sm-up") {
+        max-width: 1200px;
+    }
+}
+
+body {
+    background-color: $bg-color-body;
+    color: $color-body;
+    font-family: $font-family-primary;
+    font-optical-sizing: auto;
+    font-size: 20px;
+    line-height: 1.2;
+}

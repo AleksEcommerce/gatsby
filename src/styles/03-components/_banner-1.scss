@@ -1,0 +1,61 @@
+.b-banner {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    &-head {
+        order: 1;
+        width: 100%;
+    }
+
+    &--title {
+        @include main-title; 
+    }
+
+    &-image {
+        order: 2;
+        width: 35%;
+
+        .gatsby-image-wrapper {
+            width: 150%;
+            height: auto;
+            margin-left: -50%;
+        }
+    }
+
+    &-content {
+        width: 65%;
+        order: 3;
+        letter-spacing: 3px;
+    }
+
+    &--title_1 {
+        @include main-title; 
+    }
+
+    &--title_2 {
+        font-size: 32px;
+        font-weight: 900;
+        line-height: 1.2em;
+        margin-bottom: 20px;
+
+        &.m-last {
+            margin-bottom: 30px;
+        }
+    }
+
+    &--title_3 {
+        color: $color-primary;
+        font-size: 120px;
+        font-weight: 900;
+        line-height: 1em;
+        margin-bottom: 15px;
+        letter-spacing: 10px;
+        text-transform: uppercase;
+        text-shadow: 
+        -2px -2px 0 #ffffff,  
+         2px -2px 0 #ffffff,
+        -2px  2px 0 #ffffff,
+         2px  2px 0 #ffffff;
+    }
+}
