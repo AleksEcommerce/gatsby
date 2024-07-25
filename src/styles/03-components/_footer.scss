@@ -1,0 +1,76 @@
+.l-footer {
+    position: relative;
+
+    &::after,
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        bottom: 45px;
+        width: 100vw;
+    }
+
+    &::after {
+        z-index: -2;
+        content: '';
+        position: absolute;
+        background: url('../images/dollar.webp') repeat center center;  
+    }
+
+    &::before {
+        background-color: rgba(0,0,0,0.7);
+        z-index: -1;
+    }
+
+    &__head {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 10px 0;
+
+        @include media("sm-down") {
+            grid-template-columns: 1fr;
+            padding: 20px 0;
+        }
+    }
+
+    &__head-column {
+
+    }
+}
+
+.b-contacts {
+    height: 100%;
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    &__list-item {
+        color: #ffffff;
+        font-size: 24px;
+        line-height: 1.2em;
+        padding: 12px 0;
+    }
+
+    &__list-item_link {
+        color: #ffffff;
+        text-decoration: none;
+
+        &:hover {
+            color: $color-primary;
+            text-decoration: underline;
+        }
+    }
+}
+
+.b-copyright {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 1.2em;
+    padding: 12px 0;
+}

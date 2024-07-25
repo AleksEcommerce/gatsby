@@ -1,0 +1,9 @@
+.b-lightbox {
+    &__title {
+        @include main-title;
+
+        & {
+            text-align: center;
+        }
+    }
+}

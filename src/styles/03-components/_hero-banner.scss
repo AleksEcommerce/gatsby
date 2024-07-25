@@ -1,9 +1,11 @@
 .b-hero_banner {
     position: relative;
-    width: 100%;
+    max-width: 480px;
+    margin: 0 auto 30px;
     height: 100vh;
 
     @include media("sm-down") {
+        max-width: none;
         width: calc(100% + 2 * ($padding-container));
         margin: 0 calc($padding-container * -1) 40px;
     }

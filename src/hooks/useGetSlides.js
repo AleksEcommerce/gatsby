@@ -1,15 +1,21 @@
 import { graphql, useStaticQuery } from "gatsby";
 
-const useGetImages = () => {
+const useGetSlides = () => {
   const data = useStaticQuery(graphql`
     query {
-      allFile(filter: { extension: { regex: "/(jpg|jpeg|png|webp)/" }, sourceInstanceName: { eq: "images" } }) {
+      allFile(
+        filter: { 
+          extension: { regex: "/(jpg|jpeg|png|webp)/" }, 
+          relativePath: { regex: "/slides/" }
+        }
+      ) {
         edges {
           node {
             relativePath
             childImageSharp {
               gatsbyImageData(layout: FULL_WIDTH)
             }
+            publicURL
           }
         }
       }
@@ -19,4 +25,4 @@ const useGetImages = () => {
   return data;
 };
 
-export default useGetImages;
+export default useGetSlides;

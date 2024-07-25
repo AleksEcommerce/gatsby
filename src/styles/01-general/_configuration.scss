@@ -28,10 +28,11 @@
 }
 
 // Styles for .container
-.container {
+.g-container {
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
+    box-sizing: border-box;
 
     @include media("sm-up") {
         max-width: 1200px;
@@ -45,4 +46,27 @@ body {
     font-optical-sizing: auto;
     font-size: 20px;
     line-height: 1.2;
+    overflow-x: hidden;
+}
+
+@mixin scrollbar($size, $front-color, $back-color) {
+    // For Google Chrome
+    &::-webkit-scrollbar {
+      width:  $size;
+      height: $size;
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: $front-color;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: $back-color;
+    }
+  
+    // For Internet Explorer
+    & {
+      scrollbar-face-color: $front-color;
+      scrollbar-track-color: $back-color;
+    }
 }

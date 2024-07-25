@@ -20,11 +20,12 @@ export const ClientsNumber = () => {
         </div> 
         
         <div className="b-banner-content">
-        <p className="b-banner--title_1">Та <span className='text-primary'>відео</span></p>
-        <p className="b-banner--title_2">Та відео</p>
-        <p className="b-banner--title_3">258</p>
-        <p className="b-banner--title_2 m-last">Учасниць успішно пройшли навчання</p>
-        <a href="https://example.com" className="btn btn-primary">HOCHU KURS</a>
+          <p className="b-banner--title_1">Та <span className='text-primary'>відео</span></p>
+          <p className="b-banner--title_2">Та відео</p>
+          <p className="b-banner--title_3">258</p>
+          <p className="b-banner--title_2 m-last">Учасниць успішно пройшли навчання</p>
+          <a href="https://example.com" className="btn btn-primary">HOCHU KURS</a>
+          
         </div>
     </div>
   )

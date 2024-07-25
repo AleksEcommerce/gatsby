@@ -11,7 +11,8 @@ import { RatesBanners } from "../components/page-components/rates/ratesBanners";
 import { ClientList } from "../components/page-components/clients/clientList";
 import { ClientList1 } from "../components/page-components/clients/clientList-1";
 import { ClientsNumber } from "../components/page-components/banner-numbers/clientNumbers";
-// import { Gallery } from "../components/page-components/lightgallery/lightgallery";
+import LightboxGallery from "../components/page-components/lightgallery/lightgallery";
+import Footer from "../components/page-components/footer/footer";
 
  
 const IndexPage = () => {
@@ -23,7 +24,14 @@ const IndexPage = () => {
         <ClientList /> 
         <ClientList1 />
         <RatesBanners />
-        {/* <Gallery /> */}
+
+        <section className="b-lightbox">
+          <h2 className="b-lightbox__title">
+          <span className='text-primary'>Відгуки</span> <br /> учасниць курсу</h2>
+          <LightboxGallery />
+        </section>
+
+        <Footer />
       </Layout>
     </>
   )

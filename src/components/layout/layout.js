@@ -9,11 +9,11 @@ import "../../styles/global.css";
 const Layout = ({ pageTitle, children }) => {
   const data = useSiteMetadata();
   return (
-    <main className='container'>
+    <div className='g-container'>
       <Header>
-        <h1>{data.title}</h1>
+        <h1 className='hidden'>{data.title}</h1>
       </Header>
-      <nav> 
+      <nav className='hidden'> 
         <ul>
           <li>
             <Link to="/">Home</Link>
@@ -26,11 +26,11 @@ const Layout = ({ pageTitle, children }) => {
           </li>
         </ul>
       </nav>
-      <main>
-        <h1>{pageTitle}</h1>
+      <div>
+        <h1 className='hidden'>{pageTitle}</h1>
         {children}
-      </main>
-    </main>
+      </div>
+    </div>
   )
 }
 
